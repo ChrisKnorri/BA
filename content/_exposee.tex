@@ -1,0 +1,72 @@
+\chapter{Konzeption und prototypische Implementierung eines VR-basierten Tools zur kollaborativen Annotation von BIM-Modellen auf Basis der Unreal Engine}
+
+\section{Einleitung und Motivation}
+
+Die Digitalisierung der Bauindustrie hat in den letzten Jahren durch den Einsatz von Building Information Modeling (BIM) erheblich an Bedeutung gewonnen.
+BIM beschreibt die digitale Repräsentation eines Bauwerks unter Integration geometrischer, semantischer und funktionaler Informationen und dient als zentrale Grundlage für Planung, Ausführung und Betrieb von Bauprojekten.\cite{Eastman2011}
+Parallel dazu hat sich Virtual Reality (VR) als Schlüsseltechnologie zur immersiven Visualisierung komplexer Daten etabliert.
+Insbesondere im Bauwesen ermöglicht VR eine realitätsnahe Begehung von Gebäudemodellen bereits in frühen Planungsphasen, wodurch Planungsfehler frühzeitig erkannt und Kommunikationsprozesse verbessert werden können.
+Planer, Auftraggeber und Öffentlichkeit können Projekte realistischer beurteilen, was zu fundierteren Entscheidungen führt und Fehlinterpretationen reduziert.
+Besonders Nicht-Experten können durch VR erleichtert in den Schaffensprozess mit eingebunden werden.
+Perspektivisch können Bürgerinnen und Bürger geplante Räume „begehen“ und fundierteres Feedback geben, was insbesondere in der Stadt- und Umweltplanung relevant sein könnte
+befindet sich aber (Stand 2015) noch in einer Entwicklungsphase mit praktischen Einschränkungen.
+VR birgt also großes Potenzial, Planungsprozesse zu verbessern und transparenter zu machen und als leistungsfähiges Werkzeug verständliche, partizipative und realistische Planung zu ermöglichen.\cite{Portman2015}
+
+Trotz dieser Entwicklungen zeigt sich ein grundlegendes Defizit in der praktischen Anwendung: Während BIM-Systeme detaillierte Modellierung und Datenverwaltung ermöglichen, werden VR-Anwendungen meist lediglich zur Visualisierung eingesetzt.
+Eine direkte Interaktion mit dem Modell – insbesondere im Sinne kollaborativer Bearbeitung oder strukturierter Annotation – ist nur eingeschränkt möglich.\cite{Whyte2018}
+Dies führt zu einem fragmentierten Workflow: Erkenntnisse aus VR-Begehungen müssen manuell dokumentiert und anschließend in das BIM-System übertragen werden.
+Dieser Medienbruch verursacht Ineffizienz, erhöht die Fehleranfälligkeit und erschwert die Zusammenarbeit zwischen Projektbeteiligten wie Architekten, Ingenieuren und anderen Stakeholdern.
+Ein besonders praxisrelevantes Szenario ist die Präsentation eines Bauprojekts beim Kunden vor Ort.
+Hierbei könnte eine VR-Brille genutzt werden, um das Modell immersiv zu erleben und Änderungswünsche direkt zu erfassen.
+Eine integrierte Lösung für diesen Anwendungsfall existiert jedoch bislang nicht in ausgereifter Form.
+
+
+\section{Stand der Forschung und Problemstellung}
+
+Die Kombination von BIM und VR wurde in der Forschung bereits intensiv untersucht.
+Studien zeigen, dass VR insbesondere das räumliche Verständnis verbessert und die Kommunikation zwischen Projektbeteiligten unterstützt.\cite{Whyte2018}
+Du et al. zeigen, dass VR-basierte Systeme die Effizienz von Design-Reviews erhöhen können.
+Gleichzeitig wird jedoch deutlich, dass die meisten Systeme keine bidirektionale Integration mit BIM-Daten ermöglichen.
+Kollaborative VR-Umgebungen wurden unter anderem im Kontext von Multi-User-Systemen untersucht.
+Messner et al. beschreiben frühe Ansätze, bei denen mehrere Nutzer gleichzeitig auf ein virtuelles Gebäudemodell zugreifen können.
+Neuere Arbeiten erweitern diesen Ansatz in Richtung „Metaverse“-ähnlicher Systeme, bei denen persistente virtuelle Räume entstehen.\cite{Wang2018}
+Dennoch bleibt die Integration in bestehende BIM-Workflows eine offene Herausforderung.
+Es fehlt ein integriertes System, das eine kollaborative Interaktion mit BIM-Modellen in einer VR-Umgebung ermöglicht und dabei eine strukturierte Rückführung von Annotationen in den BIM-Workflow unterstützt.
+Annotationen sind ein zentrales Element in kollaborativen Planungsprozessen.
+In klassischen BIM-Workflows werden hierfür häufig externe Tools oder Formate wie das BIM Collaboration Format (BCF) verwendet.
+In VR-Umgebungen existieren zwar Ansätze zur Platzierung von Markern oder Kommentaren, jedoch fehlt in der Regel eine strukturierte Verknüpfung mit BIM-Elementen sowie eine automatisierte Rückführung in das Ursprungsmodell.\cite{Wang2018}
+Bestehende Lösungen weisen mehrere Einschränkungen auf:
+
+
+\begin{itemize}
+\item VR-Anwendungen sind primär visualisierungsorientiert und erlauben keine tiefgehende Interaktion mit BIM-Daten.\cite{Du2018}
+\item BIM-Modelle werden häufig in polygonale Darstellungen überführt, wodurch semantische Informationen verloren gehen.\cite{Wang2018}
+\item Kollaborative Funktionen sind entweder nicht vorhanden oder nicht mit BIM-Systemen integriert.\cite{Messner2003}
+\end{itemize}
+
+Darüber hinaus besteht eine Diskrepanz zwischen Forschung und Praxis: Während prototypische Ansätze zur Integration von VR und BIM existieren, fehlen praxistaugliche, leicht einsetzbare Lösungen für den mobilen Einsatz beim Kunden.
+
+\section{Zielsetzung der Arbeit}
+
+Ziel dieser Bachelorarbeit ist die Konzeption und prototypische Implementierung eines Systems, das die genannten Defizite adressiert.
+Der Fokus liegt dabei bewusst auf der Annotation und Interaktion, nicht auf der vollständigen Bearbeitung von BIM-Modellen in VR.
+Im Zuge der Arbeit wird zunächst ein Entwurf für ein VR-gestütztes System zur Darstellung von BIM-Modellen erstellt.
+Auf dieser Basis wird ein funktionierender Prototyp unter Einsatz der Unreal Engine als technische Grundlage entwickelt.
+Ein weiterer Fokus besteht in der Implementierung eines Systems zur Erstellung und Verwaltung von Annotationen innerhalb der VR-Umgebung.
+Zusätzlich werden unterschiedliche Methoden zur systematischen Speicherung und zur anschließenden Verarbeitung der gesammelten Annotationen analysiert und beurteilt.
+Als Ergebnis der Arbeit wird ein funktionsfähiger VR-Prototyp erwartet.
+Darüber hinaus soll ein Konzept zur Integration von Annotationen in bestehende BIM-Workflows entwickelt werden.
+Ergänzend dazu erfolgt eine Analyse der technischen Herausforderungen, die im Rahmen der Umsetzung und Integration auftreten.
+
+
+\section{Vorläufige Gliederung}
+
+\begin{enumerate}
+\item Einleitung
+\item Grundlagen
+\item Stand der Forschung
+\item Anforderungsanalyse und Systemkonzept
+\item Entwurf und Implementierung
+\item Evaluation und Diskussion
+\item Fazit und Ausblick
+\end{enumerate}
